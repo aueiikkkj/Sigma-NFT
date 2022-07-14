@@ -1,7 +1,7 @@
 <?php
 // include do footer
 include_once './includes/_banco.php';
-include_once './includes/_dados.php';
+
 include_once './includes/_head.php';
 include_once './includes/_header.php';
 
@@ -12,13 +12,25 @@ include_once './includes/_header.php';
     <div class="row mt-5">
         
         <?php
-        for ($i=0; $i < 10 ; $i++) { 
-            
-        
+        //cria uma variável que contem SQL executado
+        $sql = "SELECT * FROM categorias WHERE Ativo = 1";
+        //executa o comando SQL
+        $exec = mysqli_query ($conn,$sql);
+        $numProdutos = mysqli_num_rows ($exec);
+
+        while ($dados = mysqli_fetch_assoc($exec) ) {
+            echo '<h1>'.$dados['Nome'].'</h1>';
+        }
+
+        foreach($produtos as $i){
+            $sql = "INSERT INTO produtos VALUES ($produtos['nome'] $produtos['preco'] $produtos['descricao'] $produtos['imagem'])";
+        }
+
+        for ($i=0; $i < 3; $i++){
         
         ?>
         <div class="card m-3" style="width: 18rem;">
-    <img class="card-img-top" src="./content/<?php echo $produtos[$i]['imagem'];?>" alt="Imagem de capa do card" >
+    <img class="card-img-top" src="./content/<?php echo $produtos[$i]['imagem'];?>" alt="Imagem de capa do card" height=250  >
     <div class="card-body">
         <h5 class="card-title"><?php echo $produtos[$i]['nome'];?></h5>
         <h7 class="card-text"> Preço: <?php echo $produtos[$i]['preco']?></h7>
@@ -34,9 +46,3 @@ include_once './includes/_header.php';
 
 </div>
 
-
-
-<?php
-// include do footer
-include_once './includes/_footer.php';
-?>

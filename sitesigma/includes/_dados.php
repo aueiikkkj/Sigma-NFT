@@ -2,7 +2,7 @@
 
 $produtos = array (
     0 => array('nome' => 'Capivara', 'preco' => 'Pra você é de graça', 'descricao' => 'Fofa, igual você', 'imagem' => 'capivara.jpg'),
-    1 => array('nome' => 'Pietro', 'preco' => 'Troll face', 'descricao' => '44kg no supino, péssimo no vôlei', 'imagem' => 'pietro.jfif'),
+    1 => array('nome' => 'Pietro', 'preco' => 'Troll face', 'descricao' => '50kg no supino, péssimo no vôlei', 'imagem' => 'pietro.jfif'),
     2 => array('nome' => 'Bagre', 'preco' => 'Barato', 'descricao' => 'Gosta de Skol', 'imagem' => 'bagre.jpg'),
     3 => array('nome' => 'Famoso bingus', 'preco' => 'R$100.000.000', 'descricao' => 'Bingus', 'imagem' => 'bingus.jpg'),
     4 => array('nome' => 'Rinha de canguru', 'preco' => 'Depende do quanto aposta', 'descricao' => 'Bate bastante', 'imagem' => 'cangurus.jpg'),
@@ -32,6 +32,8 @@ $produtos = array (
     28 => array('nome' => '', 'preco' => '', 'descricao' => '', 'imagem' => ''),
     29 => array('nome' => '', 'preco' => '', 'descricao' => '', 'imagem' => ''),
 );
+
+
 
 
 ?>
