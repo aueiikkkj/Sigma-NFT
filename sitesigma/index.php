@@ -22,17 +22,13 @@ include_once './includes/_header.php';
             echo '<h1>'.$dados['Nome'].'</h1>';
         }
 
-        foreach($produtos as $i){
-            $sql = "INSERT INTO produtos VALUES ($produtos['nome'] $produtos['preco'] $produtos['descricao'] $produtos['imagem'])";
-        }
-
         for ($i=0; $i < 3; $i++){
         
         ?>
         <div class="card m-3" style="width: 18rem;">
     <img class="card-img-top" src="./content/<?php echo $produtos[$i]['imagem'];?>" alt="Imagem de capa do card" height=250  >
     <div class="card-body">
-        <h5 class="card-title"><?php echo $produtos[$i]['nome'];?></h5>
+        <h5 class="card-title"><?php echo $produtos[$i]['Nome'];?></h5>
         <h7 class="card-text"> Preço: <?php echo $produtos[$i]['preco']?></h7>
         <p class="card-text"> Descrição: <?php echo $produtos[$i]['descricao'];?></p>
         <a href="produto-detalhe.php?id=<?php echo $i;?>&tipo=promocao" class="btn btn-primary">Visitar</a>
